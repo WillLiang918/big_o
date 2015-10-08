@@ -37,5 +37,21 @@ def okay_two_sum?(nums, target)
   false
 end
 
-p okay_two_sum?(arr, 6) # => should be true
-p okay_two_sum?(arr, 10) # => should be false
+def best_two_sum?(nums, target)
+  h = Hash.new(0)
+  nums.each do |num|
+    h[num] += 1
+  end
+  nums.each do |num|
+    difference = target - num
+    if difference == num
+      return true if h[difference] > 1
+    else
+      return true if h[difference] > 0
+    end
+  end
+  false
+end
+
+p best_two_sum?(arr, 6)
+p best_two_sum?(arr, 10) # => should be false
