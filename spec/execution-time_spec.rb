@@ -12,3 +12,15 @@ describe "#my_min" do
   end
 
 end
+
+describe "#largest_contiguous_subsum" do
+
+  it "returns the largest contiguous sub sum" do
+    expect(largest_contiguous_subsum_p1([5, 3, -7])).to eq(8)
+  end
+
+  it "returns the largest contiguous sub sum" do
+    expect(largest_contiguous_subsum_p2([5, 3, -7])).to eq(8)
+  end
+
+end
